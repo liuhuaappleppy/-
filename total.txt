@@ -1,0 +1,21 @@
+嵌入式linux应用完全开发手册 配置环境 source ~/.bashrc
+
+ternurall 每天学习一个linux命令
+
+recursion 递归 
+
+
+
+关于·VMware ubuntu固定ip地址操作步骤及注意事项
+
+关键点 ：修改/etc/netplan/目录下的yaml文件
+
+设置网卡名称，静态ip（注意表明操作位/24） ;网关； 禁用动态ip分配
+
+设置dns服务器地址
+
+netplan apply
+restart
+
+
+注意！！！默认静态ip不能设置和网关相近 否则导致ssh无法连接
