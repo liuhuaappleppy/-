@@ -1,0 +1,642 @@
+make -C /home/py/100ask_imx6ull-sdk/Linux-4.9.88 M=`pwd` modules
+make[1]: Entering directory '/home/py/100ask_imx6ull-sdk/Linux-4.9.88'
+
+  WARNING: Symbol version dump ./Module.symvers
+           is missing; modules will have no dependencies and modversions.
+
+  CC [M]  /home/py/drivers_projects/01_hello_drv/hello_drv.o
+In file included from ./arch/x86/include/asm/bitops.h:16:0,
+                 from ./include/linux/bitops.h:36,
+                 from ./include/linux/kernel.h:10,
+                 from ./include/linux/list.h:8,
+                 from ./include/linux/module.h:9,
+                 from /home/py/drivers_projects/01_hello_drv/hello_drv.c:1:
+./arch/x86/include/asm/arch_hweight.h: In function ‘__arch_hweight64’:
+./arch/x86/include/asm/arch_hweight.h:54:42: error: expected ‘:’ or ‘)’ before ‘POPCNT64’
+  asm (ALTERNATIVE("call __sw_hweight64", POPCNT64, X86_FEATURE_POPCNT)
+                                          ^
+./arch/x86/include/asm/alternative.h:132:28: note: in definition of macro ‘ALTINSTR_REPLACEMENT’
+  b_replacement(num)":\n\t" newinstr "\n" e_replacement(num) ":\n\t"
+                            ^~~~~~~~
+./arch/x86/include/asm/arch_hweight.h:54:7: note: in expansion of macro ‘ALTERNATIVE’
+  asm (ALTERNATIVE("call __sw_hweight64", POPCNT64, X86_FEATURE_POPCNT)
+       ^~~~~~~~~~~
+In file included from ./arch/x86/include/asm/atomic.h:268:0,
+                 from ./include/linux/atomic.h:4,
+                 from ./include/linux/jump_label.h:169,
+                 from ./arch/x86/include/asm/string_64.h:5,
+                 from ./arch/x86/include/asm/string.h:4,
+                 from ./include/linux/string.h:18,
+                 from ./arch/x86/include/asm/page_32.h:34,
+                 from ./arch/x86/include/asm/page.h:13,
+                 from ./arch/x86/include/asm/thread_info.h:11,
+                 from ./include/linux/thread_info.h:58,
+                 from ./arch/x86/include/asm/preempt.h:6,
+                 from ./include/linux/preempt.h:59,
+                 from ./include/linux/spinlock.h:50,
+                 from ./include/linux/seqlock.h:35,
+                 from ./include/linux/time.h:5,
+                 from ./include/linux/stat.h:18,
+                 from ./include/linux/module.h:10,
+                 from /home/py/drivers_projects/01_hello_drv/hello_drv.c:1:
+./arch/x86/include/asm/atomic64_64.h: At top level:
+./arch/x86/include/asm/atomic64_64.h:19:40: error: unknown type name ‘atomic64_t’
+ static inline long atomic64_read(const atomic64_t *v)
+                                        ^~~~~~~~~~
+In file included from ./include/uapi/linux/stddef.h:1:0,
+                 from ./include/linux/stddef.h:4,
+                 from ./include/uapi/linux/posix_types.h:4,
+                 from ./include/uapi/linux/types.h:13,
+                 from ./include/linux/types.h:5,
+                 from ./include/linux/list.h:4,
+                 from ./include/linux/module.h:9,
+                 from /home/py/drivers_projects/01_hello_drv/hello_drv.c:1:
+./arch/x86/include/asm/atomic64_64.h: In function ‘atomic64_read’:
+./arch/x86/include/asm/atomic64_64.h:21:22: error: request for member ‘counter’ in something not a structure or union
+  return READ_ONCE((v)->counter);
+                      ^
+./include/linux/compiler.h:305:17: note: in definition of macro ‘__READ_ONCE’
+  union { typeof(x) __val; char __c[1]; } __u;   \
+                 ^
+./arch/x86/include/asm/atomic64_64.h:21:9: note: in expansion of macro ‘READ_ONCE’
+  return READ_ONCE((v)->counter);
+         ^~~~~~~~~
+./arch/x86/include/asm/atomic64_64.h:21:22: error: request for member ‘counter’ in something not a structure or union
+  return READ_ONCE((v)->counter);
+                      ^
+./include/linux/compiler.h:307:22: note: in definition of macro ‘__READ_ONCE’
+   __read_once_size(&(x), __u.__c, sizeof(x));  \
+                      ^
+./arch/x86/include/asm/atomic64_64.h:21:9: note: in expansion of macro ‘READ_ONCE’
+  return READ_ONCE((v)->counter);
+         ^~~~~~~~~
+./arch/x86/include/asm/atomic64_64.h:21:22: error: request for member ‘counter’ in something not a structure or union
+  return READ_ONCE((v)->counter);
+                      ^
+./include/linux/compiler.h:307:42: note: in definition of macro ‘__READ_ONCE’
+   __read_once_size(&(x), __u.__c, sizeof(x));  \
+                                          ^
+./arch/x86/include/asm/atomic64_64.h:21:9: note: in expansion of macro ‘READ_ONCE’
+  return READ_ONCE((v)->counter);
+         ^~~~~~~~~
+./arch/x86/include/asm/atomic64_64.h:21:22: error: request for member ‘counter’ in something not a structure or union
+  return READ_ONCE((v)->counter);
+                      ^
+./include/linux/compiler.h:309:30: note: in definition of macro ‘__READ_ONCE’
+   __read_once_size_nocheck(&(x), __u.__c, sizeof(x)); \
+                              ^
+./arch/x86/include/asm/atomic64_64.h:21:9: note: in expansion of macro ‘READ_ONCE’
+  return READ_ONCE((v)->counter);
+         ^~~~~~~~~
+./arch/x86/include/asm/atomic64_64.h:21:22: error: request for member ‘counter’ in something not a structure or union
+  return READ_ONCE((v)->counter);
+                      ^
+./include/linux/compiler.h:309:50: note: in definition of macro ‘__READ_ONCE’
+   __read_once_size_nocheck(&(x), __u.__c, sizeof(x)); \
+                                                  ^
+./arch/x86/include/asm/atomic64_64.h:21:9: note: in expansion of macro ‘READ_ONCE’
+  return READ_ONCE((v)->counter);
+         ^~~~~~~~~
+In file included from ./arch/x86/include/asm/atomic.h:268:0,
+                 from ./include/linux/atomic.h:4,
+                 from ./include/linux/jump_label.h:169,
+                 from ./arch/x86/include/asm/string_64.h:5,
+                 from ./arch/x86/include/asm/string.h:4,
+                 from ./include/linux/string.h:18,
+                 from ./arch/x86/include/asm/page_32.h:34,
+                 from ./arch/x86/include/asm/page.h:13,
+                 from ./arch/x86/include/asm/thread_info.h:11,
+                 from ./include/linux/thread_info.h:58,
+                 from ./arch/x86/include/asm/preempt.h:6,
+                 from ./include/linux/preempt.h:59,
+                 from ./include/linux/spinlock.h:50,
+                 from ./include/linux/seqlock.h:35,
+                 from ./include/linux/time.h:5,
+                 from ./include/linux/stat.h:18,
+                 from ./include/linux/module.h:10,
+                 from /home/py/drivers_projects/01_hello_drv/hello_drv.c:1:
+./arch/x86/include/asm/atomic64_64.h: At top level:
+./arch/x86/include/asm/atomic64_64.h:31:33: error: unknown type name ‘atomic64_t’; did you mean ‘atomic_t’?
+ static inline void atomic64_set(atomic64_t *v, long i)
+                                 ^~~~~~~~~~
+                                 atomic_t
+./arch/x86/include/asm/atomic64_64.h:43:50: error: unknown type name ‘atomic64_t’; did you mean ‘atomic_t’?
+ static __always_inline void atomic64_add(long i, atomic64_t *v)
+                                                  ^~~~~~~~~~
+                                                  atomic_t
+./arch/x86/include/asm/atomic64_64.h:57:41: error: unknown type name ‘atomic64_t’; did you mean ‘atomic_t’?
+ static inline void atomic64_sub(long i, atomic64_t *v)
+                                         ^~~~~~~~~~
+                                         atomic_t
+./arch/x86/include/asm/atomic64_64.h:73:50: error: unknown type name ‘atomic64_t’; did you mean ‘atomic_t’?
+ static inline bool atomic64_sub_and_test(long i, atomic64_t *v)
+                                                  ^~~~~~~~~~
+                                                  atomic_t
+./arch/x86/include/asm/atomic64_64.h:84:42: error: unknown type name ‘atomic64_t’; did you mean ‘atomic_t’?
+ static __always_inline void atomic64_inc(atomic64_t *v)
+                                          ^~~~~~~~~~
+                                          atomic_t
+./arch/x86/include/asm/atomic64_64.h:97:42: error: unknown type name ‘atomic64_t’; did you mean ‘atomic_t’?
+ static __always_inline void atomic64_dec(atomic64_t *v)
+                                          ^~~~~~~~~~
+                                          atomic_t
+./arch/x86/include/asm/atomic64_64.h:112:42: error: unknown type name ‘atomic64_t’; did you mean ‘atomic_t’?
+ static inline bool atomic64_dec_and_test(atomic64_t *v)
+                                          ^~~~~~~~~~
+                                          atomic_t
+./arch/x86/include/asm/atomic64_64.h:125:42: error: unknown type name ‘atomic64_t’; did you mean ‘atomic_t’?
+ static inline bool atomic64_inc_and_test(atomic64_t *v)
+                                          ^~~~~~~~~~
+                                          atomic_t
+./arch/x86/include/asm/atomic64_64.h:139:50: error: unknown type name ‘atomic64_t’; did you mean ‘atomic_t’?
+ static inline bool atomic64_add_negative(long i, atomic64_t *v)
+                                                  ^~~~~~~~~~
+                                                  atomic_t
+./arch/x86/include/asm/atomic64_64.h:151:57: error: unknown type name ‘atomic64_t’; did you mean ‘atomic_t’?
+ static __always_inline long atomic64_add_return(long i, atomic64_t *v)
+                                                         ^~~~~~~~~~
+                                                         atomic_t
+./arch/x86/include/asm/atomic64_64.h:156:48: error: unknown type name ‘atomic64_t’; did you mean ‘atomic_t’?
+ static inline long atomic64_sub_return(long i, atomic64_t *v)
+                                                ^~~~~~~~~~
+                                                atomic_t
+./arch/x86/include/asm/atomic64_64.h:161:47: error: unknown type name ‘atomic64_t’; did you mean ‘atomic_t’?
+ static inline long atomic64_fetch_add(long i, atomic64_t *v)
+                                               ^~~~~~~~~~
+                                               atomic_t
+./arch/x86/include/asm/atomic64_64.h:166:47: error: unknown type name ‘atomic64_t’; did you mean ‘atomic_t’?
+ static inline long atomic64_fetch_sub(long i, atomic64_t *v)
+                                               ^~~~~~~~~~
+                                               atomic_t
+./arch/x86/include/asm/atomic64_64.h:174:37: error: unknown type name ‘atomic64_t’; did you mean ‘atomic_t’?
+ static inline long atomic64_cmpxchg(atomic64_t *v, long old, long new)
+                                     ^~~~~~~~~~
+                                     atomic_t
+./arch/x86/include/asm/atomic64_64.h:179:34: error: unknown type name ‘atomic64_t’; did you mean ‘atomic_t’?
+ static inline long atomic64_xchg(atomic64_t *v, long new)
+                                  ^~~~~~~~~~
+                                  atomic_t
+./arch/x86/include/asm/atomic64_64.h:193:40: error: unknown type name ‘atomic64_t’; did you mean ‘atomic_t’?
+ static inline bool atomic64_add_unless(atomic64_t *v, long a, long u)
+                                        ^~~~~~~~~~
+                                        atomic_t
+./arch/x86/include/asm/atomic64_64.h:217:45: error: unknown type name ‘atomic64_t’; did you mean ‘atomic_t’?
+ static inline long atomic64_dec_if_positive(atomic64_t *v)
+                                             ^~~~~~~~~~
+                                             atomic_t
+./arch/x86/include/asm/atomic64_64.h:234:42: error: unknown type name ‘atomic64_t’; did you mean ‘atomic_t’?
+ static inline void atomic64_##op(long i, atomic64_t *v)   \
+                                          ^
+./arch/x86/include/asm/atomic64_64.h:256:2: note: in expansion of macro ‘ATOMIC64_OP’
+  ATOMIC64_OP(op)       \
+  ^~~~~~~~~~~
+./arch/x86/include/asm/atomic64_64.h:259:1: note: in expansion of macro ‘ATOMIC64_OPS’
+ ATOMIC64_OPS(and, &)
+ ^~~~~~~~~~~~
+./arch/x86/include/asm/atomic64_64.h:243:48: error: unknown type name ‘atomic64_t’; did you mean ‘atomic_t’?
+ static inline long atomic64_fetch_##op(long i, atomic64_t *v)  \
+                                                ^
+./arch/x86/include/asm/atomic64_64.h:257:2: note: in expansion of macro ‘ATOMIC64_FETCH_OP’
+  ATOMIC64_FETCH_OP(op, c_op)
+  ^~~~~~~~~~~~~~~~~
+./arch/x86/include/asm/atomic64_64.h:259:1: note: in expansion of macro ‘ATOMIC64_OPS’
+ ATOMIC64_OPS(and, &)
+ ^~~~~~~~~~~~
+./arch/x86/include/asm/atomic64_64.h:234:42: error: unknown type name ‘atomic64_t’; did you mean ‘atomic_t’?
+ static inline void atomic64_##op(long i, atomic64_t *v)   \
+                                          ^
+./arch/x86/include/asm/atomic64_64.h:256:2: note: in expansion of macro ‘ATOMIC64_OP’
+  ATOMIC64_OP(op)       \
+  ^~~~~~~~~~~
+./arch/x86/include/asm/atomic64_64.h:260:1: note: in expansion of macro ‘ATOMIC64_OPS’
+ ATOMIC64_OPS(or, |)
+ ^~~~~~~~~~~~
+./arch/x86/include/asm/atomic64_64.h:243:48: error: unknown type name ‘atomic64_t’; did you mean ‘atomic_t’?
+ static inline long atomic64_fetch_##op(long i, atomic64_t *v)  \
+                                                ^
+./arch/x86/include/asm/atomic64_64.h:257:2: note: in expansion of macro ‘ATOMIC64_FETCH_OP’
+  ATOMIC64_FETCH_OP(op, c_op)
+  ^~~~~~~~~~~~~~~~~
+./arch/x86/include/asm/atomic64_64.h:260:1: note: in expansion of macro ‘ATOMIC64_OPS’
+ ATOMIC64_OPS(or, |)
+ ^~~~~~~~~~~~
+./arch/x86/include/asm/atomic64_64.h:234:42: error: unknown type name ‘atomic64_t’; did you mean ‘atomic_t’?
+ static inline void atomic64_##op(long i, atomic64_t *v)   \
+                                          ^
+./arch/x86/include/asm/atomic64_64.h:256:2: note: in expansion of macro ‘ATOMIC64_OP’
+  ATOMIC64_OP(op)       \
+  ^~~~~~~~~~~
+./arch/x86/include/asm/atomic64_64.h:261:1: note: in expansion of macro ‘ATOMIC64_OPS’
+ ATOMIC64_OPS(xor, ^)
+ ^~~~~~~~~~~~
+./arch/x86/include/asm/atomic64_64.h:243:48: error: unknown type name ‘atomic64_t’; did you mean ‘atomic_t’?
+ static inline long atomic64_fetch_##op(long i, atomic64_t *v)  \
+                                                ^
+./arch/x86/include/asm/atomic64_64.h:257:2: note: in expansion of macro ‘ATOMIC64_FETCH_OP’
+  ATOMIC64_FETCH_OP(op, c_op)
+  ^~~~~~~~~~~~~~~~~
+./arch/x86/include/asm/atomic64_64.h:261:1: note: in expansion of macro ‘ATOMIC64_OPS’
+ ATOMIC64_OPS(xor, ^)
+ ^~~~~~~~~~~~
+In file included from ./include/linux/jump_label.h:169:0,
+                 from ./arch/x86/include/asm/string_64.h:5,
+                 from ./arch/x86/include/asm/string.h:4,
+                 from ./include/linux/string.h:18,
+                 from ./arch/x86/include/asm/page_32.h:34,
+                 from ./arch/x86/include/asm/page.h:13,
+                 from ./arch/x86/include/asm/thread_info.h:11,
+                 from ./include/linux/thread_info.h:58,
+                 from ./arch/x86/include/asm/preempt.h:6,
+                 from ./include/linux/preempt.h:59,
+                 from ./include/linux/spinlock.h:50,
+                 from ./include/linux/seqlock.h:35,
+                 from ./include/linux/time.h:5,
+                 from ./include/linux/stat.h:18,
+                 from ./include/linux/module.h:10,
+                 from /home/py/drivers_projects/01_hello_drv/hello_drv.c:1:
+./include/linux/atomic.h:1000:49: error: unknown type name ‘atomic64_t’; did you mean ‘atomic_t’?
+ static inline void atomic64_andnot(long long i, atomic64_t *v)
+                                                 ^~~~~~~~~~
+                                                 atomic_t
+./include/linux/atomic.h:1005:60: error: unknown type name ‘atomic64_t’; did you mean ‘atomic_t’?
+ static inline long long atomic64_fetch_andnot(long long i, atomic64_t *v)
+                                                            ^~~~~~~~~~
+                                                            atomic_t
+./include/linux/atomic.h:1010:68: error: unknown type name ‘atomic64_t’; did you mean ‘atomic_t’?
+ static inline long long atomic64_fetch_andnot_relaxed(long long i, atomic64_t *v)
+                                                                    ^~~~~~~~~~
+                                                                    atomic_t
+./include/linux/atomic.h:1015:68: error: unknown type name ‘atomic64_t’; did you mean ‘atomic_t’?
+ static inline long long atomic64_fetch_andnot_acquire(long long i, atomic64_t *v)
+                                                                    ^~~~~~~~~~
+                                                                    atomic_t
+./include/linux/atomic.h:1020:68: error: unknown type name ‘atomic64_t’; did you mean ‘atomic_t’?
+ static inline long long atomic64_fetch_andnot_release(long long i, atomic64_t *v)
+                                                                    ^~~~~~~~~~
+                                                                    atomic_t
+In file included from ./arch/x86/include/asm/pgtable_types.h:315:0,
+                 from ./arch/x86/include/asm/processor.h:18,
+                 from ./arch/x86/include/asm/cpufeature.h:4,
+                 from ./arch/x86/include/asm/thread_info.h:52,
+                 from ./include/linux/thread_info.h:58,
+                 from ./arch/x86/include/asm/preempt.h:6,
+                 from ./include/linux/preempt.h:59,
+                 from ./include/linux/spinlock.h:50,
+                 from ./include/linux/seqlock.h:35,
+                 from ./include/linux/time.h:5,
+                 from ./include/linux/stat.h:18,
+                 from ./include/linux/module.h:10,
+                 from /home/py/drivers_projects/01_hello_drv/hello_drv.c:1:
+./include/asm-generic/pgtable-nopud.h:15:0: warning: "PUD_SHIFT" redefined
+ #define PUD_SHIFT PGDIR_SHIFT
+
+In file included from ./arch/x86/include/asm/pgtable_types.h:267:0,
+                 from ./arch/x86/include/asm/processor.h:18,
+                 from ./arch/x86/include/asm/cpufeature.h:4,
+                 from ./arch/x86/include/asm/thread_info.h:52,
+                 from ./include/linux/thread_info.h:58,
+                 from ./arch/x86/include/asm/preempt.h:6,
+                 from ./include/linux/preempt.h:59,
+                 from ./include/linux/spinlock.h:50,
+                 from ./include/linux/seqlock.h:35,
+                 from ./include/linux/time.h:5,
+                 from ./include/linux/stat.h:18,
+                 from ./include/linux/module.h:10,
+                 from /home/py/drivers_projects/01_hello_drv/hello_drv.c:1:
+./arch/x86/include/asm/pgtable_64_types.h:34:0: note: this is the location of the previous definition
+ #define PUD_SHIFT 30
+
+In file included from ./arch/x86/include/asm/pgtable_types.h:315:0,
+                 from ./arch/x86/include/asm/processor.h:18,
+                 from ./arch/x86/include/asm/cpufeature.h:4,
+                 from ./arch/x86/include/asm/thread_info.h:52,
+                 from ./include/linux/thread_info.h:58,
+                 from ./arch/x86/include/asm/preempt.h:6,
+                 from ./include/linux/preempt.h:59,
+                 from ./include/linux/spinlock.h:50,
+                 from ./include/linux/seqlock.h:35,
+                 from ./include/linux/time.h:5,
+                 from ./include/linux/stat.h:18,
+                 from ./include/linux/module.h:10,
+                 from /home/py/drivers_projects/01_hello_drv/hello_drv.c:1:
+./include/asm-generic/pgtable-nopud.h:16:0: warning: "PTRS_PER_PUD" redefined
+ #define PTRS_PER_PUD 1
+
+In file included from ./arch/x86/include/asm/pgtable_types.h:267:0,
+                 from ./arch/x86/include/asm/processor.h:18,
+                 from ./arch/x86/include/asm/cpufeature.h:4,
+                 from ./arch/x86/include/asm/thread_info.h:52,
+                 from ./include/linux/thread_info.h:58,
+                 from ./arch/x86/include/asm/preempt.h:6,
+                 from ./include/linux/preempt.h:59,
+                 from ./include/linux/spinlock.h:50,
+                 from ./include/linux/seqlock.h:35,
+                 from ./include/linux/time.h:5,
+                 from ./include/linux/stat.h:18,
+                 from ./include/linux/module.h:10,
+                 from /home/py/drivers_projects/01_hello_drv/hello_drv.c:1:
+./arch/x86/include/asm/pgtable_64_types.h:35:0: note: this is the location of the previous definition
+ #define PTRS_PER_PUD 512
+
+In file included from ./arch/x86/include/asm/pgtable_types.h:315:0,
+                 from ./arch/x86/include/asm/processor.h:18,
+                 from ./arch/x86/include/asm/cpufeature.h:4,
+                 from ./arch/x86/include/asm/thread_info.h:52,
+                 from ./include/linux/thread_info.h:58,
+                 from ./arch/x86/include/asm/preempt.h:6,
+                 from ./include/linux/preempt.h:59,
+                 from ./include/linux/spinlock.h:50,
+                 from ./include/linux/seqlock.h:35,
+                 from ./include/linux/time.h:5,
+                 from ./include/linux/stat.h:18,
+                 from ./include/linux/module.h:10,
+                 from /home/py/drivers_projects/01_hello_drv/hello_drv.c:1:
+./include/asm-generic/pgtable-nopud.h:17:0: warning: "PUD_SIZE" redefined
+ #define PUD_SIZE   (1UL << PUD_SHIFT)
+
+In file included from ./arch/x86/include/asm/pgtable_types.h:267:0,
+                 from ./arch/x86/include/asm/processor.h:18,
+                 from ./arch/x86/include/asm/cpufeature.h:4,
+                 from ./arch/x86/include/asm/thread_info.h:52,
+                 from ./include/linux/thread_info.h:58,
+                 from ./arch/x86/include/asm/preempt.h:6,
+                 from ./include/linux/preempt.h:59,
+                 from ./include/linux/spinlock.h:50,
+                 from ./include/linux/seqlock.h:35,
+                 from ./include/linux/time.h:5,
+                 from ./include/linux/stat.h:18,
+                 from ./include/linux/module.h:10,
+                 from /home/py/drivers_projects/01_hello_drv/hello_drv.c:1:
+./arch/x86/include/asm/pgtable_64_types.h:51:0: note: this is the location of the previous definition
+ #define PUD_SIZE (_AC(1, UL) << PUD_SHIFT)
+
+In file included from ./arch/x86/include/asm/pgtable_types.h:315:0,
+                 from ./arch/x86/include/asm/processor.h:18,
+                 from ./arch/x86/include/asm/cpufeature.h:4,
+                 from ./arch/x86/include/asm/thread_info.h:52,
+                 from ./include/linux/thread_info.h:58,
+                 from ./arch/x86/include/asm/preempt.h:6,
+                 from ./include/linux/preempt.h:59,
+                 from ./include/linux/spinlock.h:50,
+                 from ./include/linux/seqlock.h:35,
+                 from ./include/linux/time.h:5,
+                 from ./include/linux/stat.h:18,
+                 from ./include/linux/module.h:10,
+                 from /home/py/drivers_projects/01_hello_drv/hello_drv.c:1:
+./include/asm-generic/pgtable-nopud.h:18:0: warning: "PUD_MASK" redefined
+ #define PUD_MASK   (~(PUD_SIZE-1))
+
+In file included from ./arch/x86/include/asm/pgtable_types.h:267:0,
+                 from ./arch/x86/include/asm/processor.h:18,
+                 from ./arch/x86/include/asm/cpufeature.h:4,
+                 from ./arch/x86/include/asm/thread_info.h:52,
+                 from ./include/linux/thread_info.h:58,
+                 from ./arch/x86/include/asm/preempt.h:6,
+                 from ./include/linux/preempt.h:59,
+                 from ./include/linux/spinlock.h:50,
+                 from ./include/linux/seqlock.h:35,
+                 from ./include/linux/time.h:5,
+                 from ./include/linux/stat.h:18,
+                 from ./include/linux/module.h:10,
+                 from /home/py/drivers_projects/01_hello_drv/hello_drv.c:1:
+./arch/x86/include/asm/pgtable_64_types.h:52:0: note: this is the location of the previous definition
+ #define PUD_MASK (~(PUD_SIZE - 1))
+
+In file included from ./arch/x86/include/asm/pgtable_types.h:336:0,
+                 from ./arch/x86/include/asm/processor.h:18,
+                 from ./arch/x86/include/asm/cpufeature.h:4,
+                 from ./arch/x86/include/asm/thread_info.h:52,
+                 from ./include/linux/thread_info.h:58,
+                 from ./arch/x86/include/asm/preempt.h:6,
+                 from ./include/linux/preempt.h:59,
+                 from ./include/linux/spinlock.h:50,
+                 from ./include/linux/seqlock.h:35,
+                 from ./include/linux/time.h:5,
+                 from ./include/linux/stat.h:18,
+                 from ./include/linux/module.h:10,
+                 from /home/py/drivers_projects/01_hello_drv/hello_drv.c:1:
+./include/asm-generic/pgtable-nopmd.h:19:0: warning: "PMD_SHIFT" redefined
+ #define PMD_SHIFT PUD_SHIFT
+
+In file included from ./arch/x86/include/asm/pgtable_types.h:267:0,
+                 from ./arch/x86/include/asm/processor.h:18,
+                 from ./arch/x86/include/asm/cpufeature.h:4,
+                 from ./arch/x86/include/asm/thread_info.h:52,
+                 from ./include/linux/thread_info.h:58,
+                 from ./arch/x86/include/asm/preempt.h:6,
+                 from ./include/linux/preempt.h:59,
+                 from ./include/linux/spinlock.h:50,
+                 from ./include/linux/seqlock.h:35,
+                 from ./include/linux/time.h:5,
+                 from ./include/linux/stat.h:18,
+                 from ./include/linux/module.h:10,
+                 from /home/py/drivers_projects/01_hello_drv/hello_drv.c:1:
+./arch/x86/include/asm/pgtable_64_types.h:41:0: note: this is the location of the previous definition
+ #define PMD_SHIFT 21
+
+In file included from ./arch/x86/include/asm/pgtable_types.h:336:0,
+                 from ./arch/x86/include/asm/processor.h:18,
+                 from ./arch/x86/include/asm/cpufeature.h:4,
+                 from ./arch/x86/include/asm/thread_info.h:52,
+                 from ./include/linux/thread_info.h:58,
+                 from ./arch/x86/include/asm/preempt.h:6,
+                 from ./include/linux/preempt.h:59,
+                 from ./include/linux/spinlock.h:50,
+                 from ./include/linux/seqlock.h:35,
+                 from ./include/linux/time.h:5,
+                 from ./include/linux/stat.h:18,
+                 from ./include/linux/module.h:10,
+                 from /home/py/drivers_projects/01_hello_drv/hello_drv.c:1:
+./include/asm-generic/pgtable-nopmd.h:20:0: warning: "PTRS_PER_PMD" redefined
+ #define PTRS_PER_PMD 1
+
+In file included from ./arch/x86/include/asm/pgtable_types.h:267:0,
+                 from ./arch/x86/include/asm/processor.h:18,
+                 from ./arch/x86/include/asm/cpufeature.h:4,
+                 from ./arch/x86/include/asm/thread_info.h:52,
+                 from ./include/linux/thread_info.h:58,
+                 from ./arch/x86/include/asm/preempt.h:6,
+                 from ./include/linux/preempt.h:59,
+                 from ./include/linux/spinlock.h:50,
+                 from ./include/linux/seqlock.h:35,
+                 from ./include/linux/time.h:5,
+                 from ./include/linux/stat.h:18,
+                 from ./include/linux/module.h:10,
+                 from /home/py/drivers_projects/01_hello_drv/hello_drv.c:1:
+./arch/x86/include/asm/pgtable_64_types.h:42:0: note: this is the location of the previous definition
+ #define PTRS_PER_PMD 512
+
+In file included from ./arch/x86/include/asm/pgtable_types.h:336:0,
+                 from ./arch/x86/include/asm/processor.h:18,
+                 from ./arch/x86/include/asm/cpufeature.h:4,
+                 from ./arch/x86/include/asm/thread_info.h:52,
+                 from ./include/linux/thread_info.h:58,
+                 from ./arch/x86/include/asm/preempt.h:6,
+                 from ./include/linux/preempt.h:59,
+                 from ./include/linux/spinlock.h:50,
+                 from ./include/linux/seqlock.h:35,
+                 from ./include/linux/time.h:5,
+                 from ./include/linux/stat.h:18,
+                 from ./include/linux/module.h:10,
+                 from /home/py/drivers_projects/01_hello_drv/hello_drv.c:1:
+./include/asm-generic/pgtable-nopmd.h:21:0: warning: "PMD_SIZE" redefined
+ #define PMD_SIZE   (1UL << PMD_SHIFT)
+
+In file included from ./arch/x86/include/asm/pgtable_types.h:267:0,
+                 from ./arch/x86/include/asm/processor.h:18,
+                 from ./arch/x86/include/asm/cpufeature.h:4,
+                 from ./arch/x86/include/asm/thread_info.h:52,
+                 from ./include/linux/thread_info.h:58,
+                 from ./arch/x86/include/asm/preempt.h:6,
+                 from ./include/linux/preempt.h:59,
+                 from ./include/linux/spinlock.h:50,
+                 from ./include/linux/seqlock.h:35,
+                 from ./include/linux/time.h:5,
+                 from ./include/linux/stat.h:18,
+                 from ./include/linux/module.h:10,
+                 from /home/py/drivers_projects/01_hello_drv/hello_drv.c:1:
+./arch/x86/include/asm/pgtable_64_types.h:49:0: note: this is the location of the previous definition
+ #define PMD_SIZE (_AC(1, UL) << PMD_SHIFT)
+
+In file included from ./arch/x86/include/asm/pgtable_types.h:336:0,
+                 from ./arch/x86/include/asm/processor.h:18,
+                 from ./arch/x86/include/asm/cpufeature.h:4,
+                 from ./arch/x86/include/asm/thread_info.h:52,
+                 from ./include/linux/thread_info.h:58,
+                 from ./arch/x86/include/asm/preempt.h:6,
+                 from ./include/linux/preempt.h:59,
+                 from ./include/linux/spinlock.h:50,
+                 from ./include/linux/seqlock.h:35,
+                 from ./include/linux/time.h:5,
+                 from ./include/linux/stat.h:18,
+                 from ./include/linux/module.h:10,
+                 from /home/py/drivers_projects/01_hello_drv/hello_drv.c:1:
+./include/asm-generic/pgtable-nopmd.h:22:0: warning: "PMD_MASK" redefined
+ #define PMD_MASK   (~(PMD_SIZE-1))
+
+In file included from ./arch/x86/include/asm/pgtable_types.h:267:0,
+                 from ./arch/x86/include/asm/processor.h:18,
+                 from ./arch/x86/include/asm/cpufeature.h:4,
+                 from ./arch/x86/include/asm/thread_info.h:52,
+                 from ./include/linux/thread_info.h:58,
+                 from ./arch/x86/include/asm/preempt.h:6,
+                 from ./include/linux/preempt.h:59,
+                 from ./include/linux/spinlock.h:50,
+                 from ./include/linux/seqlock.h:35,
+                 from ./include/linux/time.h:5,
+                 from ./include/linux/stat.h:18,
+                 from ./include/linux/module.h:10,
+                 from /home/py/drivers_projects/01_hello_drv/hello_drv.c:1:
+./arch/x86/include/asm/pgtable_64_types.h:50:0: note: this is the location of the previous definition
+ #define PMD_MASK (~(PMD_SIZE - 1))
+
+In file included from ./arch/x86/include/asm/cpufeature.h:4:0,
+                 from ./arch/x86/include/asm/thread_info.h:52,
+                 from ./include/linux/thread_info.h:58,
+                 from ./arch/x86/include/asm/preempt.h:6,
+                 from ./include/linux/preempt.h:59,
+                 from ./include/linux/spinlock.h:50,
+                 from ./include/linux/seqlock.h:35,
+                 from ./include/linux/time.h:5,
+                 from ./include/linux/stat.h:18,
+                 from ./include/linux/module.h:10,
+                 from /home/py/drivers_projects/01_hello_drv/hello_drv.c:1:
+./arch/x86/include/asm/processor.h:172:0: warning: "cache_line_size" redefined
+ #define cache_line_size() (boot_cpu_data.x86_cache_alignment)
+
+In file included from ./include/linux/printk.h:8:0,
+                 from ./include/linux/kernel.h:13,
+                 from ./include/linux/list.h:8,
+                 from ./include/linux/module.h:9,
+                 from /home/py/drivers_projects/01_hello_drv/hello_drv.c:1:
+./include/linux/cache.h:78:0: note: this is the location of the previous definition
+ #define cache_line_size() L1_CACHE_BYTES
+
+In file included from ./include/linux/cache.h:5:0,
+                 from ./include/linux/printk.h:8,
+                 from ./include/linux/kernel.h:13,
+                 from ./include/linux/list.h:8,
+                 from ./include/linux/module.h:9,
+                 from /home/py/drivers_projects/01_hello_drv/hello_drv.c:1:
+./arch/x86/include/asm/cache.h:7:25: error: ‘CONFIG_X86_L1_CACHE_SHIFT’ undeclared here (not in a function); did you mean ‘CONFIG_ARM_L1_CACHE_SHIFT’?
+ #define L1_CACHE_SHIFT (CONFIG_X86_L1_CACHE_SHIFT)
+                         ^
+./arch/x86/include/asm/cache.h:8:30: note: in expansion of macro ‘L1_CACHE_SHIFT’
+ #define L1_CACHE_BYTES (1 << L1_CACHE_SHIFT)
+                              ^~~~~~~~~~~~~~
+./include/linux/cache.h:12:25: note: in expansion of macro ‘L1_CACHE_BYTES’
+ #define SMP_CACHE_BYTES L1_CACHE_BYTES
+                         ^~~~~~~~~~~~~~
+./include/linux/cache.h:34:58: note: in expansion of macro ‘SMP_CACHE_BYTES’
+ #define ____cacheline_aligned __attribute__((__aligned__(SMP_CACHE_BYTES)))
+                                                          ^~~~~~~~~~~~~~~
+./arch/x86/include/asm/processor.h:275:27: note: in expansion of macro ‘____cacheline_aligned’
+ } __attribute__((packed)) ____cacheline_aligned;
+                           ^~~~~~~~~~~~~~~~~~~~~
+In file included from ./arch/x86/include/asm/preempt.h:5:0,
+                 from ./include/linux/preempt.h:59,
+                 from ./include/linux/spinlock.h:50,
+                 from ./include/linux/seqlock.h:35,
+                 from ./include/linux/time.h:5,
+                 from ./include/linux/stat.h:18,
+                 from ./include/linux/module.h:10,
+                 from /home/py/drivers_projects/01_hello_drv/hello_drv.c:1:
+./arch/x86/include/asm/processor.h: In function ‘current_top_of_stack’:
+./arch/x86/include/asm/processor.h:493:30: error: ‘cpu_current_top_of_stack’ undeclared (first use in this function); did you mean ‘current_top_of_stack’?
+  return this_cpu_read_stable(cpu_current_top_of_stack);
+                              ^
+./arch/x86/include/asm/percpu.h:213:9: note: in definition of macro ‘percpu_stable_op’
+  typeof(var) pfo_ret__;    \
+         ^~~
+./arch/x86/include/asm/processor.h:493:9: note: in expansion of macro ‘this_cpu_read_stable’
+  return this_cpu_read_stable(cpu_current_top_of_stack);
+         ^~~~~~~~~~~~~~~~~~~~
+./arch/x86/include/asm/processor.h:493:30: note: each undeclared identifier is reported only once for each function it appears in
+  return this_cpu_read_stable(cpu_current_top_of_stack);
+                              ^
+./arch/x86/include/asm/percpu.h:213:9: note: in definition of macro ‘percpu_stable_op’
+  typeof(var) pfo_ret__;    \
+         ^~~
+./arch/x86/include/asm/processor.h:493:9: note: in expansion of macro ‘this_cpu_read_stable’
+  return this_cpu_read_stable(cpu_current_top_of_stack);
+         ^~~~~~~~~~~~~~~~~~~~
+In file included from ./arch/x86/include/asm/preempt.h:6:0,
+                 from ./include/linux/preempt.h:59,
+                 from ./include/linux/spinlock.h:50,
+                 from ./include/linux/seqlock.h:35,
+                 from ./include/linux/time.h:5,
+                 from ./include/linux/stat.h:18,
+                 from ./include/linux/module.h:10,
+                 from /home/py/drivers_projects/01_hello_drv/hello_drv.c:1:
+./include/linux/thread_info.h: At top level:
+./include/linux/thread_info.h:113:19: error: redefinition of ‘arch_within_stack_frames’
+ static inline int arch_within_stack_frames(const void * const stack,
+                   ^~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ./include/linux/thread_info.h:58:0,
+                 from ./arch/x86/include/asm/preempt.h:6,
+                 from ./include/linux/preempt.h:59,
+                 from ./include/linux/spinlock.h:50,
+                 from ./include/linux/seqlock.h:35,
+                 from ./include/linux/time.h:5,
+                 from ./include/linux/stat.h:18,
+                 from ./include/linux/module.h:10,
+                 from /home/py/drivers_projects/01_hello_drv/hello_drv.c:1:
+./arch/x86/include/asm/thread_info.h:165:19: note: previous definition of ‘arch_within_stack_frames’ was here
+ static inline int arch_within_stack_frames(const void * const stack,
+                   ^~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ./include/linux/mmzone.h:18:0,
+                 from ./include/linux/gfp.h:5,
+                 from ./include/linux/kmod.h:22,
+                 from ./include/linux/module.h:13,
+                 from /home/py/drivers_projects/01_hello_drv/hello_drv.c:1:
+./include/linux/page-flags-layout.h:5:10: fatal error: generated/bounds.h: No such file or directory
+ #include <generated/bounds.h>
+          ^~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+scripts/Makefile.build:299: recipe for target '/home/py/drivers_projects/01_hello_drv/hello_drv.o' failed
+make[2]: *** [/home/py/drivers_projects/01_hello_drv/hello_drv.o] Error 1
+Makefile:1499: recipe for target '_module_/home/py/drivers_projects/01_hello_drv' failed
+make[1]: *** [_module_/home/py/drivers_projects/01_hello_drv] Error 2
+make[1]: Leaving directory '/home/py/100ask_imx6ull-sdk/Linux-4.9.88'
+Makefile:13: recipe for target 'all' failed
+make: *** [all] Error 2
